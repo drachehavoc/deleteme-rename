@@ -1,0 +1,6 @@
+[submodule "source/modules/domo"]
+	path = source/modules/domo
+	url = https://github.com/drachehavoc/domo
+[submodule "source/modules/elemento"]
+	path = source/modules/elemento
+	url = https://github.com/drachehavoc/elemento
