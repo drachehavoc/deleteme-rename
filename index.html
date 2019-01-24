@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <script type="module" src="build/main.js"></script>
+    <link is='cmp-style-global' for='material-icon' rel="stylesheet" href="assets/vendors/fonts/roboto/roboto.css">
+    <link is='cmp-style-for' for='material-icon' rel="stylesheet" href="assets/vendors/fonts/material-icons/material-icons.css">
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%
+        }
+
+        :root {
+            font-family: Roboto;
+            font-weight: 300;
+
+            --user-thumb: url('assets/temp-thumb.jpg');
+
+            --color-main: #FFFFFF;
+            --color-main-deep: #F7F9FA;
+            --color-main-deeper: #F3F5F7;
+
+            --color-line: #E7E7E7;
+            --color-ok: #66BB6A;
+            --color-warn: #FE763A;
+            --color-error: #F65F6E;
+
+            --color-font: #4A5960;
+            --color-font-dim: #9DAFB8;
+            --color-font-invert: #FFF7F5;
+
+            --color-spotlight: #287AE6
+        }
+
+        main {
+            display: flex;
+            height: 100%;
+        }
+
+        main prj-side-bar {
+            width: 250px;
+            height: 100%;
+            flex: none
+        }
+
+        main cmp-slot-manager {
+            width: 100%;
+            height: 100%;
+            background: var(--color-main-deeper);
+            --shadow-size: 25px;
+            box-shadow: inset var(--shadow-size) 0px var(--shadow-size) calc(var(--shadow-size) * -1) rgba(0, 0, 0, .2)
+        }
+
+        prj-login .logo {
+            width: 100%;
+            margin-top: -50%;
+            border-radius: 8px;
+            box-shadow: 0 -12px 51px -21px rgba(0,0,0,.4);
+        }
+        prj-login .inf {
+            margin-top: 1em
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <prj-side-bar class=ego>
+        </prj-side-bar>
+
+        <cmp-slot-manager>
+            <prj-login slot="a">
+                <!-- http://cecom.ifc.edu.br/logotipos-do-ifc/ -->
+                <img class='logo' src="http://cecom.ifc.edu.br/wp-content/uploads/sites/17/2015/10/Logo_IFC_horizontal_Camboriu.png">
+                <div class="inf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique veniam sequi accusantium laudantium magni possimus reprehenderit amet officiis ab? Ducimus nostrum enim minima facere optio nam aut saepe aperiam sit!</div>
+            </prj-login>
+        </cmp-slot-manager>
+    </main>
+</body>
+
+</html>

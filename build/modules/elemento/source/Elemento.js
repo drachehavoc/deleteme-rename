@@ -9,12 +9,6 @@ export const component = (options) => (constructor) => {
         constructor(...a) {
             super(...a);
         }
-        static get observedAttributes() {
-            return [
-                ...(KL._domoAttrsProps || []),
-                ...(super.observedAttributes || [])
-            ];
-        }
     }
     // -- REGISTER CUSTOM ELEMENT CLASS --------------------------------
     window.customElements.define(tagName, KL, options);
